@@ -40,7 +40,7 @@ body {
 
 .fsdev {
     font-family: "Jetbrains mono";
-    color: white;
+    color: #FFFFFF;
     font-size: medium;
     text-align: center;
     margin-top: 20px;
@@ -57,7 +57,7 @@ h1{
     text-align: center;
     padding-top: 40px;
     justify-content: center;
-    color: aliceblue;
+    color: #FFFFFF;
     font-size: 3em;
     letter-spacing: 5px;
     text-shadow: 0 0 1em currentColor;
@@ -69,7 +69,7 @@ h1{
 
  ul {
     font-family: "Jetbrains mono";
-    color: aliceblue;
+    color: #FFFFFF;
     font-size: large;
     display: flex;
     list-style: none;
@@ -80,7 +80,7 @@ h1{
 
 ul li a {
     text-decoration: none;
-    color: aliceblue;
+    color: #FFFFFF;
     display: inline-block;
     transition: color 0.15s ease;
 }
@@ -104,7 +104,7 @@ ul li a:not(:hover) {
     flex-direction: column;
     align-items: center;
     font-family: "Jetbrains mono";
-    color: aliceblue;
+    color: #FFFFFF;
     text-align: center;
     margin-top: 90px;
 }
@@ -140,5 +140,5 @@ h2 {
     margin-top: -30px;
     margin-bottom: 45px;
     border: solid 10px;
-    border-color: white;   
+    border-color: #FFFFFF;
 }
