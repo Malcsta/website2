@@ -1,0 +1,239 @@
+* {
+    background-color:#292929;
+    margin: 0;
+    padding: 0%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#github, #linkedin {
+    width: 40px;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+#mail, #insta {
+    width: 40px;
+    margin-top: 40px;
+    margin-right: 60px;
+}
+
+body {
+    animation: pageFadeIn ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+.fsdev {
+    font-family: "Jetbrains mono";
+    color: white;
+    font-size: medium;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 4px;
+}
+
+h1{
+    font-family: "Jetbrains mono";
+    font-style: italic;
+    font-weight: bolder;
+    
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 3em;
+    letter-spacing: 5px;
+    text-shadow: 0 0 1em currentColor;
+    cursor: pointer;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    animation: textFadeIn ease 0.3s;
+}
+
+.portfolio-title {
+    font-family: "Jetbrains mono";
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.greenpar {
+    color: #42b373;
+}
+
+ul {
+    font-family: "Jetbrains mono";
+    color: aliceblue;
+    font-size: large;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    transition: color 0.15s ease;
+}
+
+ul li a:hover {
+    color: #42b373;
+    animation-duration: 0.3ms f;
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 0.2s ease;
+    text-shadow: 0 0 1em currentColor;
+}
+
+ul li a:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.2s ease; 
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jetbrains mono";
+    color: white;
+    height: 501px;
+    animation: textFadeIn 0.4s ease;
+    
+}
+
+.misha, .shortys, .alex {
+    animation: textFadeIn ease 0.3s;
+    height: 400px;
+    vertical-align: middle;
+    border: solid white 5px;
+    margin-left: 10px;
+}
+
+#github:hover, #linkedin:hover, #mail:hover, #insta:hover {
+    animation-duration: 0.3ms f;
+    cursor: pointer;
+    transform: scale(110%);
+    transition: transform 0.2s ease;
+    box-shadow: 0 0 4em #42b373;
+}
+
+#github:not(:hover), #linkedin:not(:hover), #mail:not(:hover), #insta:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.2s ease; 
+}
+
+h2 {
+    font-style: italic;
+    margin-top: 60px;
+}
+
+.bio #self-portrait {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    margin-bottom: 45px;
+    border: solid 10px;
+    border-color: white;   
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .fsdev {
+        font-size: smaller;
+    }
+
+    #self-portrait {
+        width: 100px;
+    }
+
+    .link-logos img {
+        transform: scale(0.4);
+    }
+
+    .skills-div ul li {
+        font-size: smaller;
+    }
+
+    .bio p {
+        font-size: smaller;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .link-logos1, .link-logos2 {
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .fsdev {
+        font-size: x-small;
+    }
+
+    #self-portrait {
+        width: 80px;
+    }
+
+    .link-logos img {
+        transform: scale(0.3);
+    }
+
+    .skills-div ul li {
+        font-size: x-small;
+    }
+
+    .bio p {
+        font-size: x-small;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link-logos1, .link-logos2 {
+        justify-content: center;
+        margin: 5px 0;
+    }
+}
+
+@keyframes textFadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
