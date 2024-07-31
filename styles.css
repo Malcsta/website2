@@ -4,11 +4,30 @@
     padding: 0%;
 }
 
-.header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    white-space: nowrap;
+    padding: 1rem;
+}
 
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-title {
+    font-family: "Jetbrains mono";
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    animation: textFadeIn ease 0.3s;
 }
 
 #github, #linkedin {
@@ -23,12 +42,6 @@
     margin-right: 60px;
 }
 
-body {
-    animation: pageFadeIn ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 @keyframes pageFadeIn {
     0%{
         opacity: 0;
@@ -38,7 +51,15 @@ body {
     }
 }
 
-.fsdev {
+#misha, #shortys, #alex, #ryan {
+    height: 400px;
+    vertical-align: middle;
+    border: solid white 5px;
+    margin-left: 10px;
+    animation: pageFadeIn ease 1s;
+}
+
+#fsdev {
     font-family: "Jetbrains mono";
     color: #FFFFFF;
     font-size: medium;
@@ -100,6 +121,7 @@ ul li a:not(:hover) {
 }
 
 .bio {
+    animation: pageFadeIn ease 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,9 +129,11 @@ ul li a:not(:hover) {
     color: #FFFFFF;
     text-align: center;
     margin-top: 90px;
+    padding-bottom: 10px;
 }
 
-.bio-text {
+#bio-text {
+    animation: pageFadeIn ease 1s;
     width: 1000px;
     display: flex;
     align-items: center;
@@ -130,7 +154,7 @@ ul li a:not(:hover) {
 
 h2 {
     font-style: italic;
-    margin-top: 60px;
+    margin: 20px;
 }
 
 .bio #self-portrait {
@@ -138,7 +162,118 @@ h2 {
     display: flex;
     align-items: center;
     margin-top: -30px;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     border: solid 10px;
     border-color: #FFFFFF;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jetbrains mono";
+    color: white;
+    height: 501px;
+    animation: pageFadeIn ease 1s;
+    padding-bottom: 30px;
+}
+
+.gdcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jetbrains mono";
+    color: white;
+    height: 501px;
+    animation: pageFadeIn ease 1s;
+    padding-bottom: 30px;
+    overflow: hidden;
+    place-items: center; /* Center items in the grid */
+}
+
+.photoContent {
+    display: flex;
+    height: auto;
+    overflow-x: hidden;
+    align-items: center;
+    white-space: nowrap;
+    color: white;
+    animation: textFadeIn 0.4s ease;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.photoContent img {
+    flex: none;
+    width: auto;
+    height: auto; 
+    margin-right: 30px; /* Space between images */
+}
+
+#bean, #bier, #gallery, #romance, #street, #subway, #lev, #tim {
+    animation: pageFadeIn ease 1s;
+    height: 400px;
+    vertical-align: middle;
+    border: solid white 5px;
+    margin-left: 30px;
+}
+
+.skill-container {
+    font-family: "Jetbrains mono";
+    color: white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 1800px;
+    height: 461px;
+    margin: 0 auto;
+    animation: pageFadeIn ease 1s;
+
+}
+
+.skill {
+    padding: 5px;
+    text-align: center;
+    font-size: 0.95em;
+    animation: pageFadeIn ease 1s;
+}
+
+.skill-title {
+    font-size: x-large;
+    color: #42b373; 
+    font-style: italic; 
+    text-shadow: 0 0 1em currentColor;
+    animation: pageFadeIn ease 1s;
+}
+
+.sFcontent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "Jetbrains mono";
+    color: white;
+    height: 501px;
+    padding-bottom: 30px;
+    animation: pageFadeIn ease 1s;
+}
+
+#getToKnow {
+    padding-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    #link-logos1, #link-logos2 {
+        scale: 50%;
+        ;
+    }
+    #misha, #alex, #shortys, #ryan {
+        scale: 50%;
+    }
+
+    #mail, #insta, #github, #linkedin {
+        display: flex;
+    }
 }
