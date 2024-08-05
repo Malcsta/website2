@@ -4,6 +4,8 @@
     padding: 0%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 #header {
     display: flex;
     align-items: center;
@@ -283,7 +285,7 @@ h2 {
 }
 
 #fullName_error, #phone_error, #email_error {
-    color: red;   
+    color: #c01f5d;  
 }
 
 #comments {
@@ -323,6 +325,22 @@ h2 {
     padding-left: 15px;
     padding-right: 15px;
     cursor: pointer;
+}
+
+#submit:hover {
+    color: #42b373;
+    animation-duration: 3ms f;
+    transform: scale(110%);
+    transition: transform 0.2s ease;
+    text-shadow: 0 0 1em currentColor;
+}
+
+#reset:hover {
+    color: #c01f5d;
+    animation-duration: 3ms f;
+    transform: scale(110%);
+    transition: transform 0.2s ease;
+    text-shadow: 0 0 1em currentColor;
 }
 
 #getToKnow {

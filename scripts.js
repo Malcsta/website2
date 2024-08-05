@@ -35,6 +35,7 @@ function formHasErrors() {
     let requiredInputs = ["fullName", "phone", "email"];
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\+?[0-9]{1,4}?[-.\s]?(\([0-9]{1,3}?\))?[0-9]{1,4}[-.\s]?[0-9]{1,4}[-.\s]?[0-9]{1,9}$/;
+    let firstErrorInput = null;
 
     for (let i = 0; i < requiredInputs.length; i++) {
         let textInput = document.getElementById(requiredInputs[i]);
@@ -43,8 +44,9 @@ function formHasErrors() {
             document.getElementById(requiredInputs[i] + "_error").style.display = "block";
             
             if (!hasErrors) {
-                textInput.focus();
-                textInput.select();
+                if (firstErrorInput === null) {
+                    firstErrorInput = textInput; // Set the first error input
+                }
             }
 
             hasErrors = true;
@@ -57,8 +59,11 @@ function formHasErrors() {
     let emailInput = document.getElementById("email");
     if (!emailRegex.test(emailInput.value.trim())) {
         document.getElementById("email_error").style.display = "block";
-        emailInput.focus();
-        emailInput.select();
+        if (!hasErrors) {
+            if (firstErrorInput === null) {
+                firstErrorInput = emailInput; // Set the first error input
+            }
+        }
         hasErrors = true;
     } else {
         document.getElementById("email_error").style.display = "none";
@@ -67,11 +72,19 @@ function formHasErrors() {
     let phoneInput = document.getElementById("phone");
     if (!phoneRegex.test(phoneInput.value.trim())) {
         document.getElementById("phone_error").style.display = "block";
-        phoneInput.focus();
-        phoneInput.select();
+        if (!hasErrors) {
+            if (firstErrorInput === null) {
+                firstErrorInput = phoneInput; // Set the first error input
+            }
+        }
         hasErrors = true;
     } else {
         document.getElementById("phone_error").style.display = "none";
+    }
+
+    if (firstErrorInput !== null) {
+        firstErrorInput.focus();
+        firstErrorInput.select();
     }
 
     return hasErrors;
@@ -88,7 +101,8 @@ function hideErrors() {
 function load() {
     hideErrors();
     document.getElementById('contactForm').addEventListener('submit', validate);
+    document.getElementById('contactForm').addEventListener('reset', hideErrors)
 }
 
-
 document.addEventListener("DOMContentLoaded", load);
+
