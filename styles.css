@@ -95,8 +95,8 @@ h1{
     display: flex;
     list-style: none;
     justify-content: space-around;
-    padding-top: 54px;
-    padding-bottom: 50px;
+    padding-top: 44px;
+    padding-bottom: 40px;
 }
 
 ul li a {
@@ -199,7 +199,8 @@ h2 {
     white-space: nowrap;
     color: white;
     animation: textFadeIn 0.4s ease;
-    padding-bottom: 30px;
+    padding-top: 61px;
+    padding-bottom: 60px;
     position: relative;
 }
 
@@ -258,6 +259,70 @@ h2 {
     height: 501px;
     padding-bottom: 30px;
     animation: pageFadeIn ease 1s;
+}
+
+.contactsheet {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#contact {
+    text-align: center;
+    justify-content: center;
+    font-family: "Jetbrains Mono";
+    color: #FFFFFF;
+    height: 505px;
+}
+
+#fullName, #phone, #email {
+    height: 30px;
+    margin: 10px;
+    font-size: larger;
+    color: #FFFFFF;
+}
+
+#fullName_error, #phone_error, #email_error {
+    color: red;   
+}
+
+#comments {
+    height: 150px;
+    width: 600px;
+    margin: 10px;
+    font-size: larger;
+    color: #FFFFFF;
+    resize:none;
+}
+
+.error {
+    height: 30px;
+}
+
+#contactButtons {
+    color: #FFFFFF;
+    font-family: "Jetbrains Mono";
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#contactButtons a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#submit, #reset {
+    text-decoration: none;
+    font-family: "Jetbrains Mono";
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #getToKnow {
