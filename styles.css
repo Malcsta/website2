@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
 * {
     background-color:#292929;
     margin: 0;
     padding: 0%;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 #header {
     display: flex;
@@ -110,9 +111,9 @@ ul li a {
 
 ul li a:hover {
     color: #42b373;
-    animation-duration: 0.3ms f;
+    animation-duration: 0.3ms ;
     cursor: pointer;
-    transform: scale(110%);
+    transform: scale(1.1);
     transition: transform 0.2s ease;
     text-shadow: 0 0 1em currentColor;
 }
@@ -142,9 +143,9 @@ ul li a:not(:hover) {
 }
 
 #github:hover, #linkedin:hover, #mail:hover, #insta:hover {
-    animation-duration: 0.3ms f;
+    animation-duration: 0.3ms;
     cursor: pointer;
-    transform: scale(110%);
+    transform: scale(1.1);
     transition: transform 0.2s ease;
     box-shadow: 0 0 4em #42b373;
 }
@@ -329,16 +330,16 @@ h2 {
 
 #submit:hover {
     color: #42b373;
-    animation-duration: 3ms f;
-    transform: scale(110%);
+    animation-duration: 3ms;
+    transform: scale(1.1);
     transition: transform 0.2s ease;
     text-shadow: 0 0 1em currentColor;
 }
 
 #reset:hover {
     color: #c01f5d;
-    animation-duration: 3ms f;
-    transform: scale(110%);
+    animation-duration: 3ms;
+    transform: scale(1.1);
     transition: transform 0.2s ease;
     text-shadow: 0 0 1em currentColor;
 }
@@ -349,11 +350,10 @@ h2 {
 
 @media (max-width: 1000px) {
     #link-logos1, #link-logos2 {
-        scale: 50%;
-        ;
+        transform: scale(0.5);
     }
     #misha, #alex, #shortys, #ryan {
-        scale: 50%;
+        transform: scale(0.5);
     }
 
     #mail, #insta, #github, #linkedin {

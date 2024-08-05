@@ -30,6 +30,7 @@ function validate(e) {
     return true;
 }
 
+// Form validation for contact me page
 function formHasErrors() {
     let hasErrors = false;
     let requiredInputs = ["fullName", "phone", "email"];
@@ -45,7 +46,7 @@ function formHasErrors() {
             
             if (!hasErrors) {
                 if (firstErrorInput === null) {
-                    firstErrorInput = textInput; // Set the first error input
+                    firstErrorInput = textInput; 
                 }
             }
 
@@ -61,7 +62,7 @@ function formHasErrors() {
         document.getElementById("email_error").style.display = "block";
         if (!hasErrors) {
             if (firstErrorInput === null) {
-                firstErrorInput = emailInput; // Set the first error input
+                firstErrorInput = emailInput; 
             }
         }
         hasErrors = true;
@@ -74,7 +75,7 @@ function formHasErrors() {
         document.getElementById("phone_error").style.display = "block";
         if (!hasErrors) {
             if (firstErrorInput === null) {
-                firstErrorInput = phoneInput; // Set the first error input
+                firstErrorInput = phoneInput; 
             }
         }
         hasErrors = true;
@@ -103,6 +104,7 @@ function load() {
     document.getElementById('contactForm').addEventListener('submit', validate);
     document.getElementById('contactForm').addEventListener('reset', hideErrors)
 }
+
 
 document.addEventListener("DOMContentLoaded", load);
 
